@@ -12,5 +12,12 @@ class Category extends Model
         "title"
     ];
 
+    /*
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
+    */
+
     public $timestamps = false;
 }
