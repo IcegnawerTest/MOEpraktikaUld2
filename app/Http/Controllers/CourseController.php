@@ -89,9 +89,13 @@ class CourseController extends Controller
     {
         $category_id = $request->input('category_id', '1');
         $courses = Course::where('category_id', $category_id)->get();
-
         $categories = Category::all(); // Category::where('id', $category_id)->get();
         return view('categoryUser', ['courses' => $courses, 'categories' => $categories]);
+
+        /*
+            $category = Category::find($categoryId);
+            $coursInCategory = $category->cours;
+        */
     }
 }
 
